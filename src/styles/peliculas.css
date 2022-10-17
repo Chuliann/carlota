@@ -1,0 +1,141 @@
+
+
+#peliculas {
+    background-image: url(../imgp/fondopeliculas.jpg);
+    background-position: center center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    
+    padding: 8rem 2rem;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+
+.pelicula_content {
+    display: none;
+    font-family: "workvariable";
+    text-align: right;
+    padding-right: 3rem;
+    position: relative;
+
+    display: none;
+    align-self: center;
+}
+.pelicula_content.activa {
+    display: block;
+}
+.pelicula_content h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    font-family: "Benzin";
+
+    line-height: 1.1;
+}
+.pelicula_content::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50vw;
+    height: 25px;
+    bottom: -5vh;
+    left: 0;
+    transform: translateX(-35%);
+    background-color: var(--amarillo);
+    z-index: 1;
+}
+
+
+.pelicula_img {
+    display: none;
+    max-width: 400px;
+    z-index: 5;
+}
+.pelicula_img.activa {
+    display: block;
+}
+
+
+
+.pelicula_seleccionar {
+    display: flex;
+    flex-direction: column;
+}
+.pelicula_seleccionar img {
+    max-width: 100px;
+    margin: .5rem 0;
+    filter: grayscale(.8);
+
+    transition: all .4s ease-in-out;
+}
+.pelicula_seleccionar img:hover {
+    filter: none;
+}
+
+.pelicula_seleccionar img.activa {
+    filter: none;
+    transform: scale(1.1,1.1);
+
+    -webkit-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 16px 0px rgba(0,0,0,0.75);
+    background: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #peliculas {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 2rem;
+        padding: 8rem .5rem;
+    }
+
+    .pelicula_img {
+        grid-row: 1 / 2;
+        max-width: 250px;
+    }
+
+    .pelicula_seleccionar {
+        grid-row: 2 / 3;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pelicula_seleccionar img {
+        max-width: 60px;
+    }
+
+    .pelicula_content h2 {
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    
+    .pelicula_content p {
+        margin: .1rem 0;
+        text-align: center;
+        font-size: .8rem;
+    }
+
+    .pelicula_content.activa {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        align-items: end;
+        row-gap: 1rem;
+        padding: 0;
+    }
+    .pelicula_content.activa p:last-of-type {
+        grid-column: 1 / 3;
+    }
+
+    .pelicula_content::after {
+        bottom: -50px;
+        left: -10px;
+        transform: none;
+        width: 130vw;
+    }
+}

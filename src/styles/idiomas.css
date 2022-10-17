@@ -1,0 +1,85 @@
+
+
+#idiomas {
+    background-image: url(../imgp/fondo1.jpg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+
+.boton-idioma {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: "workvariable";
+    font-weight: bold;
+    font-size: 3rem;
+    margin: 0 2rem;
+    position: relative;
+
+    text-transform: initial;
+    transition: all .3s ease-in-out;
+}
+
+.boton-idioma:first-of-type::after {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -45px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-idioma:last-of-type:before {
+    content: "";
+    display: block;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -45px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.boton-idioma:hover {
+    color: var(--rojo);
+}
+
+@media only screen and (max-width: 768px) {
+    #idiomas {
+        flex-direction: column;
+        
+    }
+
+    .boton-idioma {
+        margin: 2rem 0;
+    }
+
+
+    .boton-idioma:first-of-type::after {
+        right: 0;
+        left: 50%;
+        top: 85px;
+        transform: translate(-50%,0)
+    }
+    
+    .boton-idioma:last-of-type:before {
+        right: 0;
+        left: 50%;
+        top: -35px;
+        transform: translate(-50%,0)
+    }
+}

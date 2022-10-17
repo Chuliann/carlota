@@ -1,0 +1,71 @@
+
+
+#nosotros {
+    background-image: url(../imgp/texturablanca.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 5rem 0;
+    font-family: "workvariable";
+    position: relative;
+}
+
+#nosotros .banner {
+    width: 100%;
+}
+
+
+.logo-nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+
+.logo-nosotros img {
+    z-index: 5;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 300px;
+    background-color: #ffefef;
+}
+
+.logo-nosotros h2 {
+    font-size: 2rem;
+    margin: .5rem 0;
+    
+}
+
+.logo-nosotros::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: var(--amarillo);
+    height: 10px;
+    width: 1000%;
+    top: 50%;
+    transform: translateY(200%);
+    left: -50vw;
+    z-index: 1;
+}
+
+.nosotros-content {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    font-size: 1.1rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .logo-nosotros img {
+       max-width: 200px;
+    }
+
+    .nosotros-content {
+        font-size: .9rem;
+        text-align: center;
+    }
+}

@@ -1,0 +1,87 @@
+@font-face {
+  display: swap;
+  font-family: "acumin";
+  src: url(fonts/AcuminVariableConcept.otf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "Benzin";
+  src: url(fonts/BenzinExtraBold.ttf), url(fonts/Benzin\ Bold.ttf), url(fonts/Benzin\ Medium.ttf), url(fonts/Benzin\ Regular.ttf), url(fonts/Benzin\ Semibold.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "WorkVariable";
+  src: url(fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  display: swap;
+  font-family: "workvariableitalic";
+  src: url(fonts/WorkSans-Italic-VariableFont_wght.ttf);
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+}
+
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+:root {
+  --amarillo: #D6FF01;
+  --amarillo-suave: #c5e41f;
+  --rojo: #ff0000;
+  --morado: #b01d3a;
+  --negro-suave: rgb(17, 17, 17);
+  --negro-cafe: #21181b;
+  --altura-barra: 62px;
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: "workvariable";
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.mobil {
+  display: none;
+}
+
+.negrita {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+  .mobil {
+    display: block;
+  }
+
+  .web {
+    display: none;
+  }
+}
+
+.fijarBody {
+  overflow: hidden;
+}
+
+.mayus {
+  text-transform: uppercase;
+}
+
+.benzin {
+  font-family: "Benzin";
+}

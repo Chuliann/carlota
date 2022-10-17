@@ -1,0 +1,29 @@
+
+
+.irshop {
+    position: relative;
+    width: 100%;
+    margin: 0rem 0 10rem 0;
+}
+
+
+.bannershop {
+    max-width: 100%;
+}
+.shop {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.shop {
+    max-width: 70%;
+    position: absolute;
+}
+
+.botonshop {
+    max-width: 35%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 80%);
+    position: absolute;
+}
