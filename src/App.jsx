@@ -13,6 +13,8 @@ import shop from "../src/imgp/shop.png";
 import flecha from "./imgp/flecha.png";
 import gif from "./imgp/gif.gif";
 
+import "./styles/comingsoon.css";
+import logoComing from "./imgp/logocoming.jpg";
 import "./styles/shopsection.css";
 
 function App() {
@@ -35,22 +37,27 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route
+                {/* <Route
                     element={
                         lang === "" ? (
                             <Idiomas handleIdioma={handleIdioma} />
                         ) : (
-                            <Header />
+                            <Header 
+                                setLang={setLang} 
+                                lang={lang}
+                            />
                         )
                     }
-                >
+                > */}
                     <Route index path="/" element={
-                        <>
+                        /*<>
                             <div className="hero">
                                 <img className="gif" src={gif} alt="gif"></img>
                                 <img className="flecha" src={flecha} alt=""></img>
                             </div>
-                            <Peliculas />
+                            <Peliculas 
+                                lang={lang}
+                            />
                             <div className="irshop">
                                 <img className="bannershop" src={bannershop} alt="" ></img>
                                 <img className="shop" src={shop} alt="" ></img>
@@ -59,11 +66,16 @@ function App() {
                             <Festival />
                             <Nosotros />
                             <Footer />
-                        </>
+                        </> */
+                    <div className="coming-soon" >
+                        <img src={logoComing}></img>
+                        <h2>Proximamente...</h2>
+                        <footer>fernando@fernandoromeroforsthuber.com</footer>
+                    </div>
                     }/>
                     <Route path="/shop" element={null} />
 
-                </Route>
+                {/* </Route> */}
             </Routes>
         </Router>
     );

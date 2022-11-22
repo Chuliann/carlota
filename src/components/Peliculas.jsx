@@ -2,8 +2,13 @@ import { useEffect, useState } from "react";
 
 import "../styles/peliculas.css";
 import pelicula1 from "../imgp/pelicula1.png";
+import pelicula1normal from "../imgp/pelicula1normal.jpg";
+import pelicula2 from "../imgp/pelicula2.png";
+import pelicula2normal from "../imgp/pelicula2normal.jpg";
 
-const Peliculas = () => {
+import {peliculas} from "../utils/lang.js";
+
+const Peliculas = ({lang}) => {
 
     const [activa, setActiva] = useState({
         "pel1": true,
@@ -25,9 +30,9 @@ const Peliculas = () => {
     return(
         <main id="peliculas">
             <div className={`pelicula_content ${activa.pel1 ? "activa" : ""}`}>
-                <h2>La piedra <br></br> en el zapato</h2>
-                <p>2023 | Duración: 70 minutos</p>
-                <p>Los maestros normalistas rurales de México luchan por transformar la sociedad a través de la educación, pero el sistema político los combate con toda hostilidad. </p>
+                <h2> {peliculas[lang]["tittle1"]} <br></br> {peliculas[lang]["tittle2"]}</h2>
+                <p>2023 | {peliculas[lang]["time1"]}</p>
+                <p> { peliculas[lang]["text1"] }.</p>
             </div>
             <div className={`pelicula_content ${activa.pel2 ? "activa" : ""}`}>
                 <h2>La piedra <br></br> en el zapato</h2>
@@ -42,11 +47,12 @@ const Peliculas = () => {
 
 
             <img src={pelicula1} alt="" className={`pelicula_img ${activa.pel1 ? "activa" : ""}`}></img>
+            <img src={pelicula2} alt="" className={`pelicula_img ${activa.pel2 ? "activa" : ""}`}></img>
 
 
             <div className="pelicula_seleccionar">
-                <button onClick={() => handleActiva("pel1")}><img src={pelicula1} alt="" className={`${activa.pel1 ? "activa" : ""}`}></img></button>
-                <button onClick={() => handleActiva("pel2")}><img src={pelicula1} alt="" className={`${activa.pel2 ? "activa" : ""}`}></img></button>
+                <button onClick={() => handleActiva("pel1")}><img src={pelicula1normal} alt="" className={`${activa.pel1 ? "activa" : ""}`}></img></button>
+                <button onClick={() => handleActiva("pel2")}><img src={pelicula2normal} alt="" className={`${activa.pel2 ? "activa" : ""}`}></img></button>
                 <button onClick={() => handleActiva("pel3")}><img src={pelicula1} alt="" className={`${activa.pel3 ? "activa" : ""}`}></img></button>
             </div>
         </main>

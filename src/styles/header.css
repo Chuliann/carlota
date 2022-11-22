@@ -119,8 +119,18 @@
     max-width: 90px;
 }
 
+.navegacion_idioma {
+    display: flex;
+    align-items: center;
+    
+}
 
-@media only screen and (max-width: 768px) {
+.navegacion_idioma .boton_nav::after {
+    display: none;
+}
+
+
+@media only screen and (max-width: 1070px) {
     .logo {
         position: absolute;
         left: 50%;
@@ -130,6 +140,18 @@
     }
     .logo img {
         max-width: 150px;
+    }
+
+    .logo.mobil {
+        display: block;
+    }
+    .logo.web {
+        display: none;
+    }
+
+
+    .navegacion_idioma {
+        justify-content: end;
         
     }
 
